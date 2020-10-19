@@ -1,2 +1,2 @@
-#Igor Świecki - korepetycje z informatyki
+# Igor Świecki - korepetycje z informatyki
 
