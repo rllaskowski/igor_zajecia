@@ -1,3 +1,4 @@
+/* Rozwiązanie wzorcowe zadania Szuflady */
 #include <iostream>
 
 using namespace std;
@@ -25,7 +26,7 @@ int main() {
         }
     }
 
-    cout << wynik;
+    cout << wynik << endl;
 
     return 0;
 }
