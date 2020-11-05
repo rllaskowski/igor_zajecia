@@ -3,25 +3,11 @@
 using namespace std;
 
 
-/*
-
-24   =  2^3*3^1
-x^7  =  2^7*3^7
-x    =  2^1*3^1 = 6 
-
-
-n = 15
-
-15 | 3
-5  | 5
-1 
-
-*/
-
-
-void rozklad(int n) {
+long long rozklad(int n) {
     int dzielnik = 2;
-    int wynik = 1;
+    long long wynik = 1;
+
+    
     while (n > 1) {
         if(n % dzielnik == 0) {
             // dzielnik dzieli n
@@ -34,7 +20,7 @@ void rozklad(int n) {
                 wykladnik++;
             }
             // n nie dziei sie wiecej dzielnik
-            cout << dzielnik<<"^"<<wykladnik<<"*";
+            //cout << dzielnik<<"^"<<wykladnik<<"*";
 
             // chcemy aby w naszym wyniku znajdowal sie dzielnik
             // w potedze sufit(wykladnik/7)
@@ -44,18 +30,22 @@ void rozklad(int n) {
             if (wykladnik%7!=0){
                 nowyWykladnik++;
             }
-            
+
             for (int i = 0; i < nowyWykladnik; i++) {
                 wynik *= dzielnik;
-            }
-                
+            } 
         }
         dzielnik++;
     }
+
+    return wynik;
 }
 
 int main() {
-    rozklad(345);
+    int n;
+    cin >> n;
+
+    cout << rozklad(n) << endl;
 
     return 0;
 }
