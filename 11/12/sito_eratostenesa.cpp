@@ -14,7 +14,7 @@ void sito(int n, bool czyPierwsza[]) {
         if (czyPierwsza[i]) {
             cout << i << endl;
             // i jest liczba pierwsza
-            // zanaczmy, że jej wielkrotnosci nie są
+            // zaznaczmy, że jej wielokrotnosci nie są
             for (int j=2*i;j<n;j+=i) {
                 czyPierwsza[j]=false;
             }    
