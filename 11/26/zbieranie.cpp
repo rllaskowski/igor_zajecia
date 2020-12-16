@@ -9,7 +9,7 @@ int main() {
 
     cin>>n>>m;
 
-    long long wyniki[n][m][2];
+    int wyniki[n][m][2];
     
     const int mod = 1000000007;
 
@@ -38,8 +38,8 @@ int main() {
                 swap(parzyste,nparzyste);
             }
           
-            wyniki[i][j][0]=parzyste %;
-            wyniki[i][j][1]=nparzyste;
+            wyniki[i][j][0]=parzyste % mod;
+            wyniki[i][j][1]=nparzyste % mod;
         }
     }
     cout<<wyniki[n][m][0];
