@@ -18,7 +18,11 @@ void bfs(int s) {
         v=kol.front();
         kol.pop();
         for (int x : t[v]) {
-            
+            if (!wierz[x]) {
+                wierz[x]=true;
+                odl[x]=odl[v]+1;
+                kol.push(x);
+            }
         }
     }
 }
